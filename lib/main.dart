@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:resume_daily_task/Drawer/drawer.dart';
+import 'package:resume_daily_task/Google%20Login%20Page/username.dart';
 import 'package:resume_daily_task/Login%20Page/build.dart';
 import 'package:resume_daily_task/Login%20Page/login.dart';
 
@@ -16,11 +17,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: DrawerApp(),
+      // routes: {
+      //   '/' : (context) => BuildUpPage(),
+      //   '/login' : (context) => LoginPage(),
+      //
+      // },
       initialRoute: '/',
       routes: {
-        '/' : (context) => BuildUpPage(),
-        '/login' : (context) => LoginPage(),
-
+        '/':  (context) => LoginPage1(),
       },
     );
   }
