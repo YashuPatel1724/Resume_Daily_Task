@@ -12,7 +12,6 @@ class _LoginPage1State extends State<LoginPage1> {
   @override
   Widget build(BuildContext context) {
     TextEditingController txtemail = TextEditingController();
-    TextEditingController txtpassword = TextEditingController();
 
     GlobalKey<FormState> formkey = GlobalKey();
     double height = MediaQuery
@@ -178,10 +177,18 @@ class _LoginPage1State extends State<LoginPage1> {
         if (!value.contains('@gmail.com')) {
           return 'Must Be Enter @gmail.com';
         }
+        if(value.contains(' '))
+          {
+            return 'Do not enter the sapce';
+          }
+        if(RegExp(r'[A-Z]').hasMatch(value)) {
+          return 'Entre the must be upeercase requried';
+        }
         if(value.toString()=='@gmail.com')
         {
-          return 'Must Be Enter examplae@gmail.com';
+          return 'emaple : abc@gmail.com';
         }
+
       },
       controller: controller,
       style: TextStyle(fontSize: 13),
