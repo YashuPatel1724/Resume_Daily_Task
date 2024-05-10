@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:resume_daily_task/Drawer/drawer.dart';
+import 'package:resume_daily_task/Google%20Login%20Page/password.dart';
+import 'package:resume_daily_task/Google%20Login%20Page/succes.dart';
 import 'package:resume_daily_task/Google%20Login%20Page/username.dart';
 import 'package:resume_daily_task/Login%20Page/build.dart';
 import 'package:resume_daily_task/Login%20Page/login.dart';
@@ -25,6 +27,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/':  (context) => LoginPage1(),
+          '/pass' : (context) => PasswordPage(),
+          '/succ' : (context) => ValidLogin(),
       },
     );
   }
