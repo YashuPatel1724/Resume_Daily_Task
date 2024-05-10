@@ -110,3 +110,39 @@ Ans -> Dart's Map class also supports generics, allowing you to specify the type
 <div align="center">
 <a href="https://github.com/YashuPatel1724/Resume_Daily_Task/tree/master/lib/Login%20Page">-> 📂 Go To Dart File 📂 <-</a>
 </div>
+
+<h1 align="center">👉 Google Login Page 👈</h1>
+
+<h3 align="center">Google Login Page Video </h3>
+<div align="center">
+ <video src="https://github.com/YashuPatel1724/Resume_Daily_Task/assets/148859965/0d5f9b97-1326-4c5d-934b-48494dfdd455"> 
+</video>
+</div>
+
+<h3 align="center">1. Login Page </h3>
+
+<h1 align="left"></h1>
+
+<div align="center">
+  <img height="400"  src="https://github.com/YashuPatel1724/Resume_Daily_Task/assets/148859965/26d27238-d361-4a3b-a3c6-5ebc0db136ef" />
+  <img height="400"  src="https://github.com/YashuPatel1724/Resume_Daily_Task/assets/148859965/85bce31d-1cfe-44da-8ed0-41fdcd1d10e8" />
+</div>
+<div align="center">
+<a href="https://github.com/YashuPatel1724/Resume_Daily_Task/blob/master/lib/Google%20Login%20Page/username.dart">-> 📂 Go To Dart File 📂 </a>
+</div>
+
+<div align="center">
+  <img height="400"  src="https://github.com/YashuPatel1724/Resume_Daily_Task/assets/148859965/24e3e8a5-fbf5-410e-895c-83b9e12d639e" />
+</div>
+<div align="center">
+<a href="https://github.com/YashuPatel1724/Resume_Daily_Task/blob/master/lib/Google%20Login%20Page/password.dart">-> 📂 Go To Dart File 📂 </a>
+</div>
+
+
+<div align="center">
+  <img height="400"  src="https://github.com/YashuPatel1724/Resume_Daily_Task/assets/148859965/0fe9cc47-55f6-4c69-befe-b39099039c5c" />
+</div>
+<div align="center">
+<a href="https://github.com/YashuPatel1724/Resume_Daily_Task/blob/master/lib/Google%20Login%20Page/succes.dart">-> 📂 Go To Dart File 📂 </a>
+</div>
+
