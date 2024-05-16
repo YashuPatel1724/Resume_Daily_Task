@@ -208,5 +208,3 @@ class _LoginPage1State extends State<LoginPage1> {
 }
 
 String email = 'entre the valid username';
-// RegExp emailRegex = RegExp(r'^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$');
-// bool isValidEmail = emailRegex.hasMatch(email);
