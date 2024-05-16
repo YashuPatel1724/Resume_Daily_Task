@@ -146,6 +146,12 @@ Ans -> Dart's Map class also supports generics, allowing you to specify the type
 <a href="https://github.com/YashuPatel1724/Resume_Daily_Task/blob/master/lib/Google%20Login%20Page/succes.dart">-> 📂 Go To Dart File 📂 </a>
 </div>
 
+<h1 align="center"> Snack Bar Video </h1>
+<div align="center">
+ <video src="https://github.com/YashuPatel1724/Resume_Daily_Task/assets/148859965/41cd5018-f85b-4a4e-8a12-1911393b9bdb"> 
+</video>
+</div>
+
 <h1 align="center">👉 Image Picker 👈</h1>
 
 <h3 align="center">Image Picker Video </h3>
