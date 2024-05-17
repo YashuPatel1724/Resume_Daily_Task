@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:resume_daily_task/Drawer/drawer.dart';
+import 'package:resume_daily_task/Dynamic%20TextField/dynamic.dart';
+import 'package:resume_daily_task/Dynamic%20TextField/skill.dart';
 import 'package:resume_daily_task/Google%20Login%20Page/password.dart';
 import 'package:resume_daily_task/Google%20Login%20Page/succes.dart';
 import 'package:resume_daily_task/Google%20Login%20Page/username.dart';
@@ -29,10 +31,19 @@ class MyApp extends StatelessWidget {
       //     '/pass' : (context) => PasswordPage(),
       //     '/succ' : (context) => ValidLogin(),
       // },
+
+
+      // initialRoute: '/',
+      // routes: {
+      //   '/':  (context) => Registration(),
+      //   '/id':  (context) => IdCard(),
+      // },
+
       initialRoute: '/',
       routes: {
-        '/':  (context) => Registration(),
-        '/id':  (context) => IdCard(),
+        '/':  (context) => Dynamic(),
+        '/skill':  (context) => Skill(),
+
       },
     );
   }
