@@ -168,3 +168,33 @@ Ans -> Dart's Map class also supports generics, allowing you to specify the type
 <div align="center">
 <a href="https://github.com/YashuPatel1724/Resume_Daily_Task/blob/master/lib/Image%20picker/image_picker.dart">-> 📂 Go To Dart File 📂 </a>
 </div>
+
+<h1 align="center">👉 Id Card 👈</h1>
+
+<h3 align="center">Login Page Video </h3>
+<div align="center">
+ <video src="https://github.com/YashuPatel1724/Resume_Daily_Task/assets/148859965/cce5679d-b55f-40b1-b054-b52f366873dc"> 
+</video>
+</div>
+
+
+<h3 align="center">1. Registration Form </h3>
+
+<h1 align="left"></h1>
+
+<div align="center">
+  <img height="550"  src="https://github.com/YashuPatel1724/Resume_Daily_Task/assets/148859965/451f1c7f-8ebf-40d0-b506-8371eb75ec10" />
+</div>
+<div align="center">
+<a href="https://github.com/YashuPatel1724/Resume_Daily_Task/blob/master/lib/Id%20Card/registration.dart">-> 📂 Go To Dart File 📂 <-</a>
+</div>
+
+<h3 align="center">2. Id Card </h3>
+<h1 align="left"></h1>
+
+<div align="center">
+  <img height="550"  src="https://github.com/YashuPatel1724/Resume_Daily_Task/assets/148859965/ed915240-30a2-4d43-b4d7-a89672d3ad01" />
+</div>
+<div align="center">
+<a href="https://github.com/YashuPatel1724/Resume_Daily_Task/blob/master/lib/Id%20Card/idCard.dart">-> 📂 Go To Dart File 📂 <-</a>
+</div>
