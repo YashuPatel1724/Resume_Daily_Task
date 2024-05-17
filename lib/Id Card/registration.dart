@@ -10,7 +10,8 @@ ImagePicker imagePicker = ImagePicker();
 File? fileImage;
 TextEditingController txtsurname = TextEditingController();
 TextEditingController txtname = TextEditingController();
-TextEditingController txtnumber = TextEditingController();
+TextEditingController txtdate = TextEditingController();
+TextEditingController txtnumber = TextEditingController(text: '+91 ');
 
 class Registration extends StatefulWidget {
   const Registration({super.key});
@@ -46,7 +47,11 @@ class _RegistrationState extends State<Registration> {
                   backgroundColor: Colors.blue,
                   radius: 55,
                   backgroundImage:
-                      (fileImage != null) ? FileImage(fileImage!) : null,
+                  (fileImage != null) ? FileImage(fileImage!) : null,
+                  child: (fileImage != null)
+                      ? null
+                      : Image.asset(
+                      'Asstes/images/3135715-removebg-preview.png'),
                 ),
               ),
               Row(
@@ -137,10 +142,46 @@ class _RegistrationState extends State<Registration> {
               Padding(
                 padding: const EdgeInsets.only(top: 20.0, right: 10, left: 10),
                 child: TextFormField(
+                  controller: txtdate,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    label: Text(
+                     'DD/MM/YY',
+                      style: TextStyle(color: Colors.black),
+                    ),
+                    suffixIcon: InkWell(
+                        onTap: ()   {
+                           setState(() async {
+                              datepicker = await showDatePicker(
+                                 context: context,
+                                 initialDate: DateTime.now(),
+                                 firstDate: DateTime(1950),
+                                 lastDate: DateTime(2025));
+                              if(datepicker!=null) {
+                                BirthDate = '${datepicker!.day}/${datepicker!
+                                    .month}/${datepicker!.year}';
+                                txtdate.text = BirthDate;
+                              }
+                           });
+                        },
+                        child: Icon(Icons.calendar_month_outlined)),
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide(width: 2, color: Colors.blue)),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 20.0, right: 10, left: 10),
+                child: TextFormField(
                   controller: txtnumber,
                   validator: (value) {
                     if (value!.isEmpty) {
                       return 'value must be requried';
+                    } else if (value.length <= 10) {
+                      return 'Number requried 10 digits';
                     }
                   },
                   decoration: InputDecoration(
@@ -237,15 +278,11 @@ class _RegistrationState extends State<Registration> {
                     onChanged: (value) {
                       setState(() {
                         hobby[0] = value!;
-                        if(value == true)
-                        {
+                        if (value == true) {
                           check.add('Reading');
-                        }
-                        else
-                        {
+                        } else {
                           check.remove('Reading');
                         }
-
                       });
                     },
                   ),
@@ -255,18 +292,11 @@ class _RegistrationState extends State<Registration> {
                     onChanged: (value) {
                       setState(() {
                         hobby[1] = value!;
-                        if(value == true)
-                        {
+                        if (value == true) {
                           check.add('Writing');
-                          List.generate(check.length, (index) => setState(() {
-                            selectindex = index;
-                          }));
-                        }
-                        else
-                        {
+                        } else {
                           check.remove('Writing');
                         }
-
                       });
                     },
                   ),
@@ -276,26 +306,20 @@ class _RegistrationState extends State<Registration> {
                     onChanged: (value) {
                       setState(() {
                         hobby[2] = value!;
-                        if(value == true)
-                          {
-                            check.add('Playing');
-                            List.generate(check.length, (index) => setState(() {
-                              selectindex = index;
-                            }));
-
-                          }
-                        else
-                          {
-                            check.remove('Playing');
-                          }
-
+                        if (value == true) {
+                          check.add('Playing');
+                        } else {
+                          check.remove('Playing');
+                        }
                       });
                     },
                   ),
                   Text('playing'),
                 ],
               ),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               Center(
                 child: ElevatedButton(
                     onPressed: () {
@@ -304,6 +328,7 @@ class _RegistrationState extends State<Registration> {
                         surname = txtsurname.text;
                         number = txtnumber.text;
                         name = txtname.text;
+                        BirthDate = txtdate.text;
                         Navigator.of(context).pushNamed('/id');
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(
@@ -318,12 +343,11 @@ class _RegistrationState extends State<Registration> {
                           ),
                         );
                       }
-                      // Navigator.of(context).pushNamed('/id');
                     },
                     child: Text(
                       'submit',
                       style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     )),
               )
             ],
@@ -334,7 +358,7 @@ class _RegistrationState extends State<Registration> {
   }
 }
 
-List check = [];
+List<String> check = [];
 String Gender = 'Male';
 List<bool> hobby = [false, false, false];
 // bool c= false;
@@ -344,3 +368,5 @@ String? surname;
 String? name;
 String? number;
 int selectindex = 0;
+DateTime? datepicker;
+String BirthDate = "";

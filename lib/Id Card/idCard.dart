@@ -43,7 +43,7 @@ class _IdCardState extends State<IdCard> {
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 8),
-                  height: 514,
+                  height: 500,
                   width: 315,
                   decoration: BoxDecoration(
                       color: Colors.white,
@@ -80,110 +80,150 @@ class _IdCardState extends State<IdCard> {
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 40.0,left: 20),
+                        padding: const EdgeInsets.only(top: 40.0, left: 20),
                         child: Row(
                           children: [
                             Text(
-                              'SuraName : ',
+                              'SuraName   ',
                               style: TextStyle(
                                   color: Colors.black54,
-                                  fontSize: 22,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(width: 20,),
+                            SizedBox(
+                              width: 20,
+                            ),
                             Text(
-                              '$surname',
+                              ': $surname',
                               style: TextStyle(
                                   color: Colors.blue,
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.bold),
+                                  fontSize: 20,),
                             ),
                           ],
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 10.0,left: 20),
+                        padding: const EdgeInsets.only(left: 20),
                         child: Row(
                           children: [
                             Text(
-                              'Name : ',
+                              'Name  ',
                               style: TextStyle(
                                   color: Colors.black54,
-                                  fontSize: 22,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(width: 67,),
+                            SizedBox(
+                              width: 67,
+                            ),
                             Text(
-                              '${name}',
+                              ': ${name}',
                               style: TextStyle(
                                   color: Colors.blue,
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.bold),
+                                  fontSize: 20,
+                                  ),
                             ),
                           ],
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 10.0,left: 20),
+                        padding: const EdgeInsets.only( left: 20),
                         child: Row(
                           children: [
                             Text(
-                              'Gender : ',
+                              'DOB',
                               style: TextStyle(
                                   color: Colors.black54,
-                                  fontSize: 22,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(width: 56,),
+                            SizedBox(
+                              width: 68,
+                            ),
                             Text(
-                              '$Gender',
+                              ': $BirthDate',
                               style: TextStyle(
-                                  color: Colors.blue,
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.bold),
+                                color: Colors.blue,
+                                fontSize: 20,
+                              ),
                             ),
                           ],
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 10.0,left: 20),
+                        padding: const EdgeInsets.only( left: 20),
                         child: Row(
                           children: [
                             Text(
-                              'Hobby : ',
+                              'Gender  ',
                               style: TextStyle(
                                   color: Colors.black54,
-                                  fontSize: 22,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             ),
+                            SizedBox(
+                              width: 56,
+                            ),
                             Text(
-                              '${List.generate(check.length, (index) => '${check[index]}')}',
+                              ': $Gender',
                               style: TextStyle(
                                   color: Colors.blue,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold),
+                                  fontSize: 20,
+                                  ),
                             ),
                           ],
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 10.0,left: 20),
+                        padding: const EdgeInsets.only( left: 20),
                         child: Row(
                           children: [
                             Text(
-                              'Mo. : ',
+                              'Hobby ',
                               style: TextStyle(
                                   color: Colors.black54,
-                                  fontSize: 22,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(width: 68,),
+                            SizedBox(width: 60,),
+                            ...List.generate(
+                                check.length,
+                                (index) => Text(
+                                      (index < check.length - 1)
+                                          ? check[index] + ','
+                                          : check[index],
+                                      style: TextStyle(color: Colors.blue,fontSize: 15),
+                                    ))
+                            //   Text(
+                            //     ,
+                            //     style: TextStyle(
+                            //         color: Colors.blue,
+                            //         fontSize: 15,
+                            //         fontWeight: FontWeight.bold),
+                            //   ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only( left: 20),
+                        child: Row(
+                          children: [
                             Text(
-                              '$number',
+                              'Mo.',
+                              style: TextStyle(
+                                  color: Colors.black54,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              width: 68,
+                            ),
+                            Text(
+                              ': $number',
                               style: TextStyle(
                                   color: Colors.blue,
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.bold),
+                                  fontSize: 20,
+                                  ),
                             ),
                           ],
                         ),
